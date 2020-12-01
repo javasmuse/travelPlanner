@@ -4,44 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Vacation Planner</title>
+    <title>Form Practice</title>
 </head>
 
 <body>
-    <div id="main">
-        <div id="top_header">
-            <h1>Vacation Destinations Wish List</h1>
-            <p>Got some ideas on where to go? Capture them with the form below.</p>
+    <div class="container">
+        <!-- creating forms with 
+name
+birday
+email
+paswd
+submit -->
+        <div id="header">
+            <h1>Vacaction Destination Wish List</h1>
+            <h3>Keep a list of your dream destinations! <br>~ The World Awaits ~</h3>
         </div>
-        <form id="destination_deets_form"></form>
-        <div class="form_group">
-            <label for="destination">Destination</label>
-            <input required minlength="2" type="text" class="form-control" id="destiny"
-                placeholder="What your dream destination?"></div>
+        <div id="main_space">
+            <form action="" id="myForm">
+                <div class="form_group"> <label for="destname">Destination</label>
+                    <input type="text" name="destname" placeholder="destination here" id="destname"
+                        class="label"></input>
+                </div>
+                <div class="form_group"><label for="Location">Location</label>
+                    <input type="text" name="locate" placeholder="location here" id="locate" class="label"></input>
+                </div>
+                <div class="form_group"> <label for="photo">Photo</label>
+                    <input type="url" name="photo" placeholder="photo URL" id="photo" class="label"></input>
+                </div>
+                <div class="form_group"><label for="notes"> Description</label>
+                    <input type="text" minlength="8" maxlength="120" name="notes" placeholder="brief description here"
+                        id="notes" class="label"></input></div>
+
+                <button type="submit" class="button">Add to List</button>
+
+            </form>
+            <div class="card">
+                <div id="card-one">
+
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="form_group">
-        <label for="location">Location</label>
-        <input required minlength="2" type="text" class="form-control" id="location"
-            placeholder="Where is your destination's location?"></div>
-    </div>
-    <div class="form_group">
-        <label for="photo">Photo</label>
-        <input type="url" class="form-control" id="photo" placeholder="Enter an image URL for your destination"></div>
-    </div>
-    <div class="form_group">
-        <label for="description">Description</label>
-        <input required minlength="2" type="text" class="form-control" id="describ"
-            placeholder="Description or destination notes"></div>
-    </div>
-    <button type="submit" class="btn" value>Add to List</button>
-    </form>
-    <div class="col-md-9">
-        <h4 id="title">Enter Destination Details</h4>
-        <div id="destination_container"></div>
-    </div>
+
 
     <script src="./scripts/main.js"></script>
 </body>
